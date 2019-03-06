@@ -1,8 +1,20 @@
 $(document).ready( function() {
   let wins = 0;
   let losses = 0;
+  let display = $("#display");
   $(".button").on("click", function() {
     let choice = this.parentElement.id
+    switch(choice){
+      case "rock":
+        display.removeClass().addClass("alert alert-primary").text("You chose "+ choice)
+        break;
+      case "paper":
+        display.removeClass().addClass("alert alert-primary").text("You chose "+ choice)
+        break;
+      case "scissors":
+        display.removeClass().addClass("alert alert-primary").text("You chose "+ choice)
+        break;
+    }
     compChoice(choice);
   })
   function compChoice(uChoice) {
@@ -15,51 +27,78 @@ $(document).ready( function() {
       case "rock":
         switch (c) {
           case "rock":
-            winner("Results: Tie.")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-warning")
+              winner("Results: Tie.")
+            }, 1500)
             break;
           case "paper":
-            losses += 1
-            $("#loseDisp").text("Losses: " + losses)
-            winner("Results: You lose.")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-danger")
+              losses += 1
+              $("#loseDisp").text("Losses: " + losses)
+              winner("Results: You lose.")
+            }, 1500)
             break;
           case "scissors":
-            wins += 1
-            $("#winDisp").text("Wins: " + wins)
-            winner("Results: You win!")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-success")
+              wins += 1
+              $("#winDisp").text("Wins: " + wins)
+              winner("Results: You win!")
+            }, 1500)
             break;
         }
         break;
       case "paper":
         switch (c) {
           case "rock":
-            wins += 1;
-            $("#winDisp").text("Wins: " + wins)
-            winner("Result: You win!")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-success")
+              wins += 1;
+              $("#winDisp").text("Wins: " + wins)
+              winner("Result: You win!")
+            }, 1500)
             break;
           case "paper":
-            winner("Result: Tie.")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-warning")
+              winner("Result: Tie.")
+            }, 1500)
             break;
           case "scissors":
-            losses += 1
-            $("#loseDisp").text("Losses: " + losses)
-            winner("Result: You lose.")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-danger")
+              losses += 1
+              $("#loseDisp").text("Losses: " + losses)
+              winner("Result: You lose.")
+            }, 1500)
             break;
         }
         break;
       case "scissors":
         switch (c) {
           case "rock":
-            losses += 1
-            $("#loseDisp").text("Losses: " + losses)
-            winner("Result: You lose.")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-danger")
+              losses += 1
+              $("#loseDisp").text("Losses: " + losses)
+              winner("Result: You lose.")
+            }, 1500)
             break;
           case "paper":
-            wins += 1
-            $("#winDisp").text("Wins: " + wins)
-            winner("Result: You win!")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-success")
+              wins += 1
+              $("#winDisp").text("Wins: " + wins)
+              winner("Result: You win!")
+            }, 1500)
             break;
           case "scissors":
-            winner("Result: Tie.")
+            setTimeout(function(){
+              display.removeClass().addClass("alert alert-warning")
+              winner("Result: Tie.")
+            }, 1500)
             break;
         }
         break;
@@ -69,4 +108,13 @@ $(document).ready( function() {
     $("#display").text(won)
   }
 });
+
+
+
+
+
+
+
+
+
 
