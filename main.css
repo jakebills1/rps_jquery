@@ -12,5 +12,11 @@
 }
 #images{
   display: flex;
-  
+}
+.container{
+  display: flex;
+}
+#scoreboard{
+  margin-top: 48px;
+  margin-left: 10px; 
 }
