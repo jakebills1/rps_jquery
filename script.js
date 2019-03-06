@@ -18,8 +18,7 @@ $(document).ready( function() {
     compChoice(choice);
   })
   function compChoice(uChoice) {
-    var compChoices = ["rock", "paper", "scissors"]
-    var cChoice = compChoices[Math.floor((Math.random()*compChoices.length))]
+    var cChoice = ["rock", "paper", "scissors"][Math.floor((Math.random()*3))]
     game(uChoice, cChoice)
   }
   function game(u, c) {
@@ -104,9 +103,7 @@ $(document).ready( function() {
         break;
     }
   }
-  function winner(won) {
-    $("#display").text(won)
-  }
+  function winner(won) { $("#display").text(won) }
 });
 
 
