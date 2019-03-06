@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <head>
   <title>Rock, Paper, Scissors</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  
+  <div class="container">
+    <div id="game">
+      <h1>Rock, Paper, Scissors</h1>
+      <div id="images">
+        <div id="rock" class="box">
+          <img src="./images/iconfinder_hand-rock-o_1608372.png" alt="rock" class="button">
+        </div>
+        <div id="paper" class="box">
+          <img src="./images/iconfinder_hand-stop-o_1608369.png" alt="papers" class="button">
+        </div>
+        <div id="scissors" class="box">
+          <img src="./images/iconfinder_hand-scissors-o_1608371.png" alt="scissors" class="button">
+        </div>
+      </div>
+      <div id="display"></div>
+    </div>
+  </div>
 
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="script.js"></script>
 </body>
