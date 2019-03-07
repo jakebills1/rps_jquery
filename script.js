@@ -36,7 +36,7 @@ $(document).ready( function() {
               display.removeClass().addClass("alert alert-danger")
               losses += 1
               $("#loseDisp").text("Losses: " + losses)
-              winner("Results: You lose.")
+              winner("Results: Paper covers Rock. You lose.")
             }, 1500)
             break;
           case "scissors":
@@ -44,7 +44,7 @@ $(document).ready( function() {
               display.removeClass().addClass("alert alert-success")
               wins += 1
               $("#winDisp").text("Wins: " + wins)
-              winner("Results: You win!")
+              winner("Results: Rock smashes scissors. You win!")
             }, 1500)
             break;
         }
@@ -56,7 +56,7 @@ $(document).ready( function() {
               display.removeClass().addClass("alert alert-success")
               wins += 1;
               $("#winDisp").text("Wins: " + wins)
-              winner("Result: You win!")
+              winner("Result: Paper covers rock. You win!")
             }, 1500)
             break;
           case "paper":
@@ -70,7 +70,7 @@ $(document).ready( function() {
               display.removeClass().addClass("alert alert-danger")
               losses += 1
               $("#loseDisp").text("Losses: " + losses)
-              winner("Result: You lose.")
+              winner("Result: Scissors cut paper. You lose.")
             }, 1500)
             break;
         }
@@ -82,7 +82,7 @@ $(document).ready( function() {
               display.removeClass().addClass("alert alert-danger")
               losses += 1
               $("#loseDisp").text("Losses: " + losses)
-              winner("Result: You lose.")
+              winner("Result: Rock smashes scissors. You lose.")
             }, 1500)
             break;
           case "paper":
@@ -90,7 +90,7 @@ $(document).ready( function() {
               display.removeClass().addClass("alert alert-success")
               wins += 1
               $("#winDisp").text("Wins: " + wins)
-              winner("Result: You win!")
+              winner("Result: Scissors cut paper. You win!")
             }, 1500)
             break;
           case "scissors":
